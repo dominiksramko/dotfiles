@@ -1,0 +1,4 @@
+#!/bin/bash
+cp config /home/drstiny/.i3
+cp Xdefaults /home/drstiny/.Xdefaults
+cp i3status.conf /etc/i3status.conf
