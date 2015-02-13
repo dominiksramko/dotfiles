@@ -1,0 +1,92 @@
+!-------------------------------------------------------------------------------
+! Xft settings
+!-------------------------------------------------------------------------------
+
+Xft.dpi:                    96
+Xft.antialias:              true
+Xft.rgba:                   rgb
+Xft.hinting:                true
+Xft.hintstyle:              hintfull
+
+#http://dotshare.it/dots/547/
+
+# -------- BASE -------- #
+  *foreground: 	 #9BBBC6
+  *background: 	 #1C1C23
+  *cursorColor:  #9BBBC6
+  *colorUL:      #1E828C
+# ---------------------- #
+
+URxvt.depth:                32
+URxvt.geometry:             90x30
+URxvt.transparent:          false
+URxvt.fading:               0
+! URxvt.urgentOnBell:         true
+! URxvt.visualBell:           true
+URxvt.loginShell:           true
+URxvt.saveLines:            50
+URxvt.internalBorder:       3
+URxvt.lineSpace:            0
+
+! Fonts
+URxvt.allow_bold:           false
+URxvt*font: xft:Inconsolata:pixelsize=14
+URxvt*boldFont: xft:Inconsolata:pixelsize=14
+
+! Fix font space
+URxvt*letterSpace: -1
+
+! Scrollbar
+URxvt.scrollStyle:          rxvt
+URxvt.scrollBar:            false
+
+! Perl extensions
+URxvt.perl-ext-common:      default,matcher
+URxvt.matcher.button:       1
+URxvt.urlLauncher:          chromium
+
+! Cursor
+URxvt.cursorBlink:          true
+URxvt.cursorColor:          #9BBBC6
+URxvt.cursorUnderline:      false
+
+! Pointer
+URxvt.pointerBlank:         true
+
+*background: #1C1C23
+*foreground: #9BBBC6
+*cursorColor: #9BBBC6
+*pointerColorBackground: #1C1C23
+*pointerColorForeground: #9BBBC6
+
+!Black
+*color0:               #323246
+*color8:               #323246
+
+!Red
+*color1:               #5A7882
+*color9:               #5A7882
+
+!Green
+*color2:               #8C8CA0
+*color10:              #8C8CA0
+
+!Yellow
+*color3:               #1E828C
+*color11:              #1E828C
+
+!Blue
+*color4:               #3C788C
+*color12:              #3C788C
+
+!Magenta
+*color5:               #6EA0B4
+*color13:              #6EA0B4
+
+!Cyan
+*color6:               #6E8CA0
+*color14:              #6E8CA0
+
+!White
+*color7:               #96BEC8
+*color15:              #96BEC8
