@@ -1,0 +1,80 @@
+Version 7
+
+loadkeys cz-qwertz
+setfont Lat2-Terminus16
+cd /run/archiso/bootmnt
+
+cfdisk /dev/sda [15360]
+mkfs.ext4 /dev/sdaX
+mount /dev/sdaX /mnt
+
+tar xf Broadcom_Firmware.tar.gz -C /lib/firmware/
+modprobe -r b43
+modprobe b43
+wifi-menu
+
+nano /etc/pacman.d/mirrorlist
+Server = http://archlinux.mirror.dkm.cz/pub/archlinux/$repo/os/$arch
+
+pacstrap /mnt base base-devel
+arch-chroot /mnt pacman -S intel-ucode grub-bios
+genfstab -p /mnt >> /mnt/etc/fstab
+mkdir /mnt/home/files
+cp * /mnt/home/files
+chmod -R 777 /mnt/home/files
+arch-chroot /mnt
+
+echo *HOSTNAME* > /etc/hostname
+
+ln -s /usr/share/zoneinfo/Europe/Prague /etc/localtime
+
+hwclock --systohc --utc
+
+nano /etc/vconsole.conf
+KEYMAP=cz-qwertz
+FONT=Lat2-Terminus16
+
+nano /etc/locale.gen
+uncomment en_US.UTF-8, ..
+echo 'LANG=en_US.UTF-8' > /etc/locale.conf
+export LANG=en_US.UTF-8
+locale-gen
+
+mkinitcpio -p linux
+
+grub-mkconfig -o /boot/grub/grub.cfg
+nano /boot/grub/grub.cfg
+mkdir /boot/grub/locale
+cp /usr/share/locale/en\@quot/LC_MESSAGES/grub.mo /boot/grub/locale/en.mo
+grub-install --recheck /dev/sda
+
+passwd root
+useradd -m -g users -G wheel -s /bin/bash drstiny
+passwd drstiny
+visudo
+
+pacman -S xorg-server xorg-xinit xorg-server-utils mesa nvidia-340xx
+pacman -S xf86-input-synaptics alsa-utils alsa-plugins pulseaudio-alsa
+pacman -S slim archlinux-themes-slim
+pacman -S i3 dmenu rxvt-unicode
+pacman -S networkmanager network-manager-applet
+pacman -S wireless_tools wpa_supplicant b43-fwcutter
+cd /home/files
+pacman -U b43-firmware
+
+nano /etc/slim.conf
+archlinux-simplyblack
+
+cp /etc/X11/xinit/xinitrc /home/*username*/.xinitrc
+chmod +x /home/*username*/.xinitrc
+nano /home/*username*/.xinitrc
+-> exec i3
+
+nano /usr/share/X11/xorg.conf.d/10-evdev.conf
+Option "XkbLayout" "cz"
+
+systemctl enable slim NetworkManager
+
+exit
+umount -R /mnt
+yreboot
