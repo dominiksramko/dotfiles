@@ -26,3 +26,4 @@ mkdir /mnt/home/files
 cp * /mnt/home/files
 chmod -R 777 /mnt/home/files
 arch-chroot /mnt
+# arch-chroot ./mnt/home/files/postchroot.sh ?
