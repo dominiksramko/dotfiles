@@ -77,4 +77,4 @@ systemctl enable slim NetworkManager
 
 exit
 umount -R /mnt
-yreboot
+reboot
