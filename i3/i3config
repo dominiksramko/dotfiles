@@ -17,8 +17,8 @@ bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+d exec dmenu_run
 
 # Assign applications to a specific workspace
-assign [class="Chromium"] → 1
-assign [class="mpv"] → 6
+assign [class="Chromium"] 1
+assign [class="mpv"]      6
 
 # Launch autostart
 exec --no-startup-id ~/.autostart
@@ -42,8 +42,8 @@ bar {
 }
 
 # Window border settings
-new_window 1pixel
-new_float 1pixel
+new_window pixel 1
+new_float pixel 1
 
 # Window border color
 client.focused                  #9BBBC6 #9BBBC6 #999999
