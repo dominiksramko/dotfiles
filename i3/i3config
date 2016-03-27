@@ -18,7 +18,7 @@ bindsym $mod+d exec dmenu_run
 
 # Assign applications to a specific workspace
 assign [class="Chromium"] 1
-assign [class="mpv"]      6
+#assign [class="mpv"]      6
 
 # Launch autostart
 exec --no-startup-id ~/.autostart
