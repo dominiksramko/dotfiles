@@ -2,6 +2,7 @@
 
 # Mouse settings
 xset m 1 1 &
-xset s 0 0 &
+xset s off &
 
 dropbox &
+redshift &
