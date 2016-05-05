@@ -1,3 +1,5 @@
+! Scheme source: http://dotshare.it/dots/547/
+
 ! Xft settings
 Xft.dpi:                    96
 Xft.antialias:              true
@@ -27,9 +29,46 @@ URxvt*boldFont: xft:Source Code Pro:pixelsize=11:style=Bold
 URxvt.scrollStyle:          rxvt
 URxvt.scrollBar:            false
 
+! Color scheme !
+#define C_background        #1C1C23
+#define C_foreground        #9BBBC5
+#define C_cursorColor       #9BBBC5
+
+! Black
+#define C_color0            #323246
+#define C_color8            #323246
+
+! Red
+#define C_color1            #5A7882
+#define C_color9            #5A7882
+
+! Green
+#define C_color2            #8C8CA0
+#define C_color10           #8C8CA0
+
+! Yellow
+#define C_color3            #1E828C
+#define C_color11           #1E828C
+
+! Blue
+#define C_color4            #3C788C
+#define C_color12           #3C788C
+
+! Magenta
+#define C_color5            #6EA0B4
+#define C_color13           #6EA0B4
+
+! Cyan
+#define C_color6            #6E8CA0
+#define C_color14           #6E8CA0
+
+! White
+#define C_color7            #96BEC8
+#define C_color15           #96BEC8
+
 ! Cursor
 URxvt.cursorBlink:          true
-URxvt.cursorColor:          $cursorColor
+URxvt.cursorColor:          C_cursorColor
 URxvt.cursorUnderline:      false
 
 ! Underline color
@@ -38,40 +77,40 @@ URxvt.cursorUnderline:      false
 ! Pointer
 URxvt.pointerBlank: true
 
-*background:             $background
-*foreground:             $foreground
-*cursorColor:            $cursorColor
-*pointerColorBackground: $background
-*pointerColorForeground: $foreground
+*background:             C_background
+*foreground:             C_foreground
+*cursorColor:            C_cursorColor
+*pointerColorBackground: C_background
+*pointerColorForeground: C_foreground
 
 !Black
-*color0:               $color0
-*color8:               $color8
+*color0:               C_color0
+*color8:               C_color8
 
 !Red
-*color1:               $color1
-*color9:               $color9
+*color1:               C_color1
+*color9:               C_color9
 
 !Green
-*color2:               $color2
-*color10:              $color10
+*color2:               C_color2
+*color10:              C_color10
 
 !Yellow
-*color3:               $color3
-*color11:              $color11
+*color3:               C_color3
+*color11:              C_color11
 
 !Blue
-*color4:               $color4
-*color12:              $color12
+*color4:               C_color4
+*color12:              C_color12
 
 !Magenta
-*color5:               $color5
-*color13:              $color13
+*color5:               C_color5
+*color13:              C_color13
 
 !Cyan
-*color6:               $color6
-*color14:              $color14
+*color6:               C_color6
+*color14:              C_color14
 
 !White
-*color7:               $color7
-*color15:              $color15
+*color7:               C_color7
+*color15:              C_color15

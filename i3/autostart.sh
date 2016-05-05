@@ -1,8 +1,10 @@
 #!/bin/bash
 
 # Mouse settings
-xset m 1 1 &
-xset s off &
+#xset m 1 1 &
+
+#xset s off &
 
 dropbox &
 redshift &
+ibus-daemon
