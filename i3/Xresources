@@ -1,4 +1,41 @@
-! Scheme source: http://dotshare.it/dots/547/
+! Unfinished theme
+
+! Color scheme !
+#define C_background        #1E1E1E
+#define C_foreground        #C4C4C4
+#define C_cursorColor       #C4C4C4
+
+! Black
+#define C_color0            #333333
+#define C_color8            #333333
+
+! Red
+#define C_color1            #8F3D3D
+#define C_color9            #8F3D3D
+
+! Green
+#define C_color2            #3D8F69
+#define C_color10           #3D8F69
+
+! Yellow
+#define C_color3            #F0D775
+#define C_color11           #F0D775
+
+! Blue
+#define C_color4            #3D668F
+#define C_color12           #3D668F
+
+! Magenta
+#define C_color5            #793D8F
+#define C_color13           #793D8F
+
+! Cyan
+#define C_color6            #428A89
+#define C_color14           #428A89
+
+! White
+#define C_color7            #CCCCCC
+#define C_color15           #CCCCCC
 
 ! Xft settings
 Xft.dpi:                    96
@@ -25,46 +62,11 @@ URxvt*letterSpace: -1
 URxvt*font:     xft:Source Code Pro:pixelsize=11
 URxvt*boldFont: xft:Source Code Pro:pixelsize=11:style=Bold
 
+! vim: ft=xdefaults
+
 ! Scrollbar
 URxvt.scrollStyle:          rxvt
 URxvt.scrollBar:            false
-
-! Color scheme !
-#define C_background        #1C1C23
-#define C_foreground        #9BBBC5
-#define C_cursorColor       #9BBBC5
-
-! Black
-#define C_color0            #323246
-#define C_color8            #323246
-
-! Red
-#define C_color1            #5A7882
-#define C_color9            #5A7882
-
-! Green
-#define C_color2            #8C8CA0
-#define C_color10           #8C8CA0
-
-! Yellow
-#define C_color3            #1E828C
-#define C_color11           #1E828C
-
-! Blue
-#define C_color4            #3C788C
-#define C_color12           #3C788C
-
-! Magenta
-#define C_color5            #6EA0B4
-#define C_color13           #6EA0B4
-
-! Cyan
-#define C_color6            #6E8CA0
-#define C_color14           #6E8CA0
-
-! White
-#define C_color7            #96BEC8
-#define C_color15           #96BEC8
 
 ! Cursor
 URxvt.cursorBlink:          true

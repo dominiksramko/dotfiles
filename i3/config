@@ -13,7 +13,8 @@ font pango:Source Code Pro 9
 workspace 6 output HDMI-0
 
 # Bindings
-bindsym $mod+Return exec i3-sensible-terminal
+#bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec gnome-terminal
 bindsym $mod+d exec dmenu_run
 
 # Assign applications to a specific workspace
@@ -29,8 +30,8 @@ bindsym XF86AudioLowerVolume exec --no-startup-id amixer set Master 5%-
 bindsym XF86AudioMute        exec --no-startup-id amixer set Master toggle
 
 
-set $background #1C1C23
-set $foreground #9BBBC5
+set $background #1E1E1E
+set $foreground #D3D7CF
 
 # i3bar config
 bar {
@@ -58,7 +59,7 @@ new_float pixel 1
 client.focused                  $foreground $foreground #999999
 client.unfocused                $foreground $foreground #666666
 client.focused_inactive         $foreground $foreground #666666
-client.urgent                   $foreground $foreground #ee0000
+client.urgent                   $foreground $foreground #8F3D3D
 
 ###################
 # EVERYTHING ELSE #
