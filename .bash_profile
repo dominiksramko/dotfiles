@@ -13,3 +13,5 @@ function hdmi_off()
 {
   xrandr --output HDMI-0 --off
 }
+
+alias dir="ls"

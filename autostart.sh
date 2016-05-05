@@ -5,6 +5,7 @@
 
 #xset s off &
 
+nitrogen --restore &
 dropbox &
 redshift &
 ibus-daemon
