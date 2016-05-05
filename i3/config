@@ -13,8 +13,7 @@ font pango:Source Code Pro 9
 workspace 6 output HDMI-0
 
 # Bindings
-#bindsym $mod+Return exec i3-sensible-terminal
-bindsym $mod+Return exec gnome-terminal
+bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+d exec dmenu_run
 
 # Assign applications to a specific workspace
