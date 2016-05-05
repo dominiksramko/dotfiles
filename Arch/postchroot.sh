@@ -26,5 +26,5 @@ chmod +x /home/drstiny/.xinitrc
 chown drstiny:users /home/drstiny/.xinitrc
 nano /home/drstiny/.xinitrc
 nano /usr/share/X11/xorg.conf.d/10-evdev.conf
-systemctl enable slim NetworkManager
+systemctl enable slim NetworkManager fstrim.timer
 echo "That's it! Now exit; umount -R /mnt; reboot and gl!"

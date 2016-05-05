@@ -1,16 +1,9 @@
 #!/bin/sh
 # Pre arch-chroot script
+# Requires mounted partition on /mnt
 
 loadkeys cz-qwertz
 setfont Lat2-Terminus16
-
-# To fix
-cfdisk /dev/sda
-mkfs.ext4 /dev/sda3
-mkfs.ext4 /dev/sda4
-mount /dev/sda3 /mnt
-mkdir /mnt/home
-mount /dev/sda4 /mnt/home
 
 tar xf Broadcom_Firmware.tar.gz -C /lib/firmware/
 modprobe -r b43

@@ -73,7 +73,7 @@ nano /home/*username*/.xinitrc
 nano /usr/share/X11/xorg.conf.d/10-evdev.conf
 Option "XkbLayout" "cz"
 
-systemctl enable slim NetworkManager
+systemctl enable slim NetworkManager fstrim.timer
 
 exit
 umount -R /mnt
