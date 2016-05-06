@@ -59,7 +59,11 @@ URxvt.lineSpace:            0
 ! Font settings
 URxvt.allow_bold:           false
 URxvt*letterSpace: -1
-URxvt*font:     xft:Source Code Pro:pixelsize=11
+
+URxvt*font: xft:Source Code Pro:pixelsize=11,\
+            xft:Kochi Gothic:antialias=false,\
+            xft:Baekmuk Gulim
+
 URxvt*boldFont: xft:Source Code Pro:pixelsize=11:style=Bold
 
 ! vim: ft=xdefaults
