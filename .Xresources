@@ -64,7 +64,9 @@ URxvt*font: xft:Source Code Pro:pixelsize=11,\
             xft:Kochi Gothic:antialias=false,\
             xft:Baekmuk Gulim
 
-URxvt*boldFont: xft:Source Code Pro:pixelsize=11:style=Bold
+URxvt*boldFont: xft:Source Code Pro:pixelsize=11:style=Bold,\
+            xft:Kochi Gothic:antialias=false:style=Bold,\
+            xft:Baekmuk Gulim:style=Bold
 
 ! vim: ft=xdefaults
 
@@ -78,7 +80,7 @@ URxvt.cursorColor:          C_cursorColor
 URxvt.cursorUnderline:      false
 
 ! Underline color
-*colorUL: $color3
+*colorUL: C_color3
 
 ! Pointer
 URxvt.pointerBlank: true
