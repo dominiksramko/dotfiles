@@ -1,0 +1,173 @@
+# i3 config file (v4)
+#
+# Please see http://i3wm.org/docs/userguide.html for a complete reference!
+
+set $mod Mod1
+
+#################
+# CUSTOM CONFIG #
+#################
+font pango:Source Code Pro 9
+
+# Second monitor
+workspace 6 output HDMI-0
+
+# Bindings
+bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+d exec dmenu_run
+
+# Assign applications to a specific workspace
+assign [class="Chromium"] 1
+#assign [class="mpv"]     6
+
+# Launch autostart
+exec --no-startup-id ~/.autostart
+
+# Multimedia keys
+bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set Master 5%+
+bindsym XF86AudioLowerVolume exec --no-startup-id amixer set Master 5%-
+bindsym XF86AudioMute        exec --no-startup-id amixer set Master toggle
+
+
+set $background #1E1E1E
+set $foreground #D3D7CF
+
+# i3bar config
+bar {
+        status_command i3status
+
+        colors {
+            background $background
+            statusline $foreground
+
+            #Invisible!
+            separator $background
+
+            inactive_workspace  $foreground $background $foreground
+            urgent_workspace    $foreground $background $foreground
+            focused_workspace   $background $foreground $background
+            active_workspace    $background $foreground $background
+        }
+}
+
+# Window border settings
+new_window pixel 1
+new_float pixel 1
+
+# Window border color
+client.focused                  $foreground $foreground #999999
+client.unfocused                $foreground $foreground #666666
+client.focused_inactive         $foreground $foreground #666666
+client.urgent                   $foreground $foreground #8F3D3D
+
+###################
+# EVERYTHING ELSE #
+###################
+
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+# kill focused window
+bindsym $mod+Shift+q kill
+
+# change focus
+bindsym $mod+j focus left
+bindsym $mod+k focus down
+bindsym $mod+l focus up
+bindsym $mod+uring focus right
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# move focused window
+bindsym $mod+Shift+j move left
+bindsym $mod+Shift+k move down
+bindsym $mod+Shift+l move up
+bindsym $mod+Shift+uring move right
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# split in horizontal orientation
+bindsym $mod+h split h
+
+# split in vertical orientation
+bindsym $mod+v split v
+
+# enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen toggle
+
+# toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+
+# change focus between tiling / floating windows
+bindsym $mod+space focus mode_toggle
+
+# focus the parent container
+bindsym $mod+a focus parent
+
+# focus the child container
+#bindsym $mod+d focus child
+
+# switch to workspace
+bindsym $mod+plus workspace 1
+bindsym $mod+ecaron workspace 2
+bindsym $mod+scaron workspace 3
+bindsym $mod+ccaron workspace 4
+bindsym $mod+rcaron workspace 5
+bindsym $mod+zcaron workspace 6
+bindsym $mod+yacute workspace 7
+bindsym $mod+aacute workspace 8
+bindsym $mod+iacute workspace 9
+bindsym $mod+eacute workspace 10
+
+# move focused container to workspace
+bindsym $mod+Shift+plus   move container to workspace 1
+bindsym $mod+Shift+ecaron move container to workspace 2
+bindsym $mod+Shift+scaron move container to workspace 3
+bindsym $mod+Shift+ccaron move container to workspace 4
+bindsym $mod+Shift+rcaron move container to workspace 5
+bindsym $mod+Shift+zcaron move container to workspace 6
+bindsym $mod+Shift+yacute move container to workspace 7
+bindsym $mod+Shift+aacute move container to workspace 8
+bindsym $mod+Shift+iacute move container to workspace 9
+bindsym $mod+Shift+eacute move container to workspace 10
+
+# reload the configuration file
+bindsym $mod+Shift+c reload
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+Shift+r restart
+# exit i3 (logs you out of your X session)
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+
+# resize window (you can also use the mouse for that)
+mode "resize" {
+        # These bindings trigger as soon as you enter the resize mode
+
+        # Pressing left will shrink the window’s width.
+        # Pressing right will grow the window’s width.
+        # Pressing up will shrink the window’s height.
+        # Pressing down will grow the window’s height.
+        bindsym j resize shrink width 10 px or 10 ppt
+        bindsym k resize grow height 10 px or 10 ppt
+        bindsym l resize shrink height 10 px or 10 ppt
+        bindsym uring resize grow width 10 px or 10 ppt
+
+        # same bindings, but for the arrow keys
+        bindsym Left resize shrink width 10 px or 10 ppt
+        bindsym Down resize grow height 10 px or 10 ppt
+        bindsym Up resize shrink height 10 px or 10 ppt
+        bindsym Right resize grow width 10 px or 10 ppt
+
+        # back to normal: Enter or Escape
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+bindsym $mod+r mode "resize"
