@@ -14,4 +14,11 @@ function hdmi_off()
   xrandr --output HDMI-0 --off
 }
 
+function ttv()
+{
+  livestreamer twitch.tv/$1 $2 &
+  google-chrome-stable --app=https://www.twitch.tv/$1/chat?popout= &&
+  fg
+}
+
 alias dir="ls"

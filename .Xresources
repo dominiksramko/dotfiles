@@ -48,7 +48,7 @@ Xft.hintstyle:              hintfull
 URxvt.depth:                32
 URxvt.geometry:             90x30
 URxvt.transparent:          false
-URxvt.fading:               0
+URxvt.fading:               10
 ! URxvt.urgentOnBell:       true
 ! URxvt.visualBell:         true
 URxvt.loginShell:           true
@@ -122,3 +122,4 @@ URxvt.pointerBlank: true
 !White
 *color7:               C_color7
 *color15:              C_color15
+
