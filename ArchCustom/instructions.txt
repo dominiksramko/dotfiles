@@ -103,7 +103,7 @@ nano /usr/share/X11/xorg.conf.d/40-libinput.conf
 -> Add `Option "XkbLayout" "cz"` to keyboard
 
 # Configure services
-systemctl enable slim NetworkManager
+systemctl enable slim NetworkManager fstrim.timer
 
 # Let's go!
 exit
