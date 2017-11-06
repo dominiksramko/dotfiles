@@ -1,4 +1,4 @@
-Version 8
+# Instruction to setup Arch and i3 with Broadcom (BCM4312)
 
 # Setup look
 loadkeys cz-qwertz
@@ -9,8 +9,8 @@ cd /run/archiso/bootmnt
 
 # Setup disk
 cfdisk /dev/sda [15360]
-mkfs.ext4 /dev/sdaX
-mount /dev/sdaX /mnt
+mkfs.ext4 /dev/sda#
+mount /dev/sda# /mnt
 
 # Setup network
 rfkill list
