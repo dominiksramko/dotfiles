@@ -28,8 +28,12 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set Master 5%+
 bindsym XF86AudioLowerVolume exec --no-startup-id amixer set Master 5%-
 bindsym XF86AudioMute        exec --no-startup-id amixer set Master toggle
 
-set $background #1E1E1E
-set $foreground #D3D7CF
+# Define colors
+set $background     #0F1419
+set $fg_dark        #35404C
+set $fg_bright      #546578
+set $text           #E6E1CF
+set $unused         #000000
 
 # i3bar config
 bar {
@@ -37,15 +41,15 @@ bar {
 
         colors {
             background $background
-            statusline $foreground
+            statusline $text
 
             #Invisible!
             separator $background
 
-            inactive_workspace  $foreground $background $foreground
-            urgent_workspace    $foreground $background $foreground
-            focused_workspace   $background $foreground $background
-            active_workspace    $background $foreground $background
+            inactive_workspace  $text $background $text
+            urgent_workspace    $text $background $text
+            focused_workspace   $background $text $background
+            active_workspace    $background $text $background
         }
 }
 
@@ -59,10 +63,12 @@ gaps outer 5
 smart_gaps on
 
 # Window border color
-client.focused                  $foreground $foreground #999999
-client.unfocused                $foreground $foreground #666666
-client.focused_inactive         $foreground $foreground #666666
-client.urgent                   $foreground $foreground #8F3D3D
+# class                     border  background  text     indicator  child_border
+client.focused              $unused $fg_dark    $unused  $fg_bright $fg_bright
+client.unfocused            $unused $fg_dark    $unused
+client.focused_inactive     $unused $fg_dark    $unused
+client.urgent               $unused $fg_dark    $unused
+
 
 ###################
 # EVERYTHING ELSE #
