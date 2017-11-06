@@ -10,7 +10,7 @@ set $mod Mod1
 font pango:Source Code Pro 9
 
 # Second monitor
-workspace 6 output HDMI-0
+# workspace 6 output HDMI-0
 
 # Bindings
 bindsym $mod+Return exec i3-sensible-terminal
@@ -18,7 +18,7 @@ bindsym $mod+d exec dmenu_run
 
 # Assign applications to a specific workspace
 assign [class="Chromium"] 1
-#assign [class="mpv"]     6
+# assign [class="mpv"]     6
 
 # Launch autostart
 exec --no-startup-id ~/.autostart
@@ -27,7 +27,6 @@ exec --no-startup-id ~/.autostart
 bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set Master 5%+
 bindsym XF86AudioLowerVolume exec --no-startup-id amixer set Master 5%-
 bindsym XF86AudioMute        exec --no-startup-id amixer set Master toggle
-
 
 set $background #1E1E1E
 set $foreground #D3D7CF
@@ -53,6 +52,11 @@ bar {
 # Window border settings
 new_window pixel 1
 new_float pixel 1
+
+# Gaps
+gaps inner 10
+gaps outer 5
+smart_gaps on
 
 # Window border color
 client.focused                  $foreground $foreground #999999
