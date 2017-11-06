@@ -1,0 +1,5 @@
+[credential]
+	helper = cache --timeout=3600
+[user]
+	email = dominiksramko@gmail.com
+	name = Dominik Šramko
