@@ -14,7 +14,7 @@ font pango:Source Code Pro 9
 
 # Bindings
 bindsym $mod+Return exec urxvt
-bindsym $mod+d exec dmenu_run
+bindsym $mod+d      exec rofi -show run
 
 # Assign applications to a specific workspace
 assign [class="Chromium"] 1
