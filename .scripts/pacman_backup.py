@@ -91,7 +91,7 @@ PACKAGE_BLACKLIST = [
   'xfwm4-themes',
   'xorg-'
 ]
-FILE_OUTPUT_PATH = '~/installed'
+FILE_OUTPUT_PATH = '~/Dropbox/Other/Documents/PC/Arch/pacman_list.txt'
 
 def get_package_list():
   package_list = []
