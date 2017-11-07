@@ -14,6 +14,11 @@ fi
 # CUSTOM #
 ##########
 
+# Prompt
+autoload -Uz promptinit
+promptinit
+prompt damoekri
+
 # Aliases
 alias dir="ls"
 
