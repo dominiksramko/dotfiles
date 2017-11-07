@@ -30,3 +30,7 @@ hdmi_on() {
 hdmi_off() {
   xrandr --output HDMI-0 --off
 }
+
+pacmanbkp() {
+  python ~/.scripts/pacman_backup.py
+}
