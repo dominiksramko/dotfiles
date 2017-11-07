@@ -59,13 +59,20 @@ URxvt.lineSpace:            0
 URxvt.allow_bold:           false
 URxvt*letterSpace: -1
 
-URxvt*font: xft:Source Code Pro:pixelsize=14,\
-            xft:Kochi Gothic:antialias=false,\
-            xft:Baekmuk Gulim
+URxvt*font: \
+            xft:Source Code Pro:pixelsize=14,\
+            xft:Noto Sans Mono CJK KR Regular:style=Regular,\
+            xft:Noto Sans Mono CJK JP Regular:style=Regular,\
+            xft:Noto Sans Mono CJK TC Regular:style=Regular,\
+            xft:Noto Sans Mono CJK SC Regular:style=Regular
 
-URxvt*boldFont: xft:Source Code Pro:pixelsize=14:style=Bold,\
-            xft:Kochi Gothic:antialias=false:style=Bold,\
-            xft:Baekmuk Gulim:style=Bold
+URxvt*boldFont: \
+            xft:Source Code Pro:pixelsize=14:style=Bold,\
+            xft:Noto Sans Mono CJK KR Bold:style=Bold,Regular,\
+            xft:Noto Sans Mono CJK JP Bold:style=Bold,Regular,\
+            xft:Noto Sans Mono CJK TC Bold:style=Bold,Regular,\
+            xft:Noto Sans Mono CJK SC Bold:style=Bold,Regular
+
 
 ! vim: ft=xdefaults
 
