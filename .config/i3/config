@@ -60,6 +60,7 @@ new_float pixel 1
 # Gaps
 gaps inner 10
 gaps outer 5
+smart_borders on
 
 # Window border color
 # class                     border  background  text     indicator  child_border
