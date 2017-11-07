@@ -1,39 +1,39 @@
 ! Color scheme !
-#define C_background        #1E1E1E
-#define C_foreground        #C4C4C4
-#define C_cursorColor       #C4C4C4
+#define C_background        #0F1419
+#define C_foreground        #E6E1CF
+#define C_cursorColor       #E6E1CF
 
 ! Black
-#define C_color0            #333333
-#define C_color8            #333333
+#define C_color0            #42505e
+#define C_color8            #34425E
 
 ! Red
-#define C_color1            #8F3D3D
-#define C_color9            #8F3D3D
+#define C_color1            #f07178
+#define C_color9            #F04D58
 
 ! Green
-#define C_color2            #3D8F69
-#define C_color10           #3D8F69
+#define C_color2            #C2D94C
+#define C_color10           #BCD92B
 
 ! Yellow
-#define C_color3            #F0D775
-#define C_color11           #F0D775
+#define C_color3            #39BAE6
+#define C_color11           #17ABE6
 
 ! Blue
-#define C_color4            #3D668F
-#define C_color12           #3D668F
+#define C_color4            #FF7733
+#define C_color12           #FF620D
 
 ! Magenta
-#define C_color5            #793D8F
-#define C_color13           #793D8F
+#define C_color5            #FFEE99
+#define C_color13           #FFEA73
 
 ! Cyan
-#define C_color6            #428A89
-#define C_color14           #428A89
+#define C_color6            #E6B673
+#define C_color14           #E6A550
 
 ! White
-#define C_color7            #CCCCCC
-#define C_color15           #CCCCCC
+#define C_color7            #000000
+#define C_color15           #000000
 
 ! Xft settings
 Xft.dpi:                    96
