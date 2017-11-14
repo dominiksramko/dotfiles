@@ -31,6 +31,14 @@ hdmi_off() {
   xrandr --output HDMI-0 --off
 }
 
-pacmanbkp() {
+pacman_backup() {
   python ~/.scripts/pacman_backup.py
+}
+
+pacman_cleanup() {
+  sudo pacman -Rns $(pacman -Qtdq)
+}
+
+pacman_recent() {
+  yaourt -Q --date
 }
