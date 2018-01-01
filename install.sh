@@ -1,26 +1,25 @@
 #!/bin/bash
 
 # X
-ln -s `pwd`/.Xresources ~/.Xresources
-xrdb ~/.Xresources
-
-# scripts
-ln -s `pwd`/.scripts/ ~/.scripts
+#n -sf `pwd`/.Xresources ~/.Xresources
+#rdb ~/.Xresources
 
 # i3wm
-rm -rf ~/.config/i3
-mkdir ~/.config/i3
-ln -s `pwd`/.config/i3/config ~/.config/i3/config
+# ln -sf `pwd`/.config/i3/config ~/.config/i3/config
+# ln -sf `pwd`/.config/i3status/config ~/.config/i3status/config
 
-rm -rf ~/.config/i3status
-mkdir ~/.config/i3status
-ln -s `pwd`/.config/i3status/config ~/.config/i3status/config
-
-# zsh
-ln -s `pwd`/.zshrc ~/
+# bash
+ln -sf `pwd`/.bashrc ~/
 
 # fontconfig
-ln -s `pwd`/.fonts.conf ~/
+ln -sf `pwd`/.fonts.conf ~/
 
-cp autostart.sh ~/.autostart
-chmod +x ~/.autostart
+# scripts
+ln -sf `pwd`/.scripts/ ~/.scripts
+
+# git
+ln -sf `pwd`/.gitconfig ~/
+
+# mpv
+ln -sf `pwd`/.config/mpv/mpv.conf ~/.config/mpv/mpv.conf
+ln -sf `pwd`/.config/mpv/input.conf ~/.config/mpv/input.conf
