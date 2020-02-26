@@ -60,14 +60,14 @@ URxvt.allow_bold:           false
 URxvt*letterSpace: -1
 
 URxvt*font: \
-            xft:Source Code Pro:pixelsize=14,\
+            xft:Fira Code:pixelsize=14,\
             xft:Noto Sans Mono CJK KR Regular:style=Regular,\
             xft:Noto Sans Mono CJK JP Regular:style=Regular,\
             xft:Noto Sans Mono CJK TC Regular:style=Regular,\
             xft:Noto Sans Mono CJK SC Regular:style=Regular
 
 URxvt*boldFont: \
-            xft:Source Code Pro:pixelsize=14:style=Bold,\
+            xft:Fira Code:pixelsize=14:style=Bold,\
             xft:Noto Sans Mono CJK KR Bold:style=Bold,Regular,\
             xft:Noto Sans Mono CJK JP Bold:style=Bold,Regular,\
             xft:Noto Sans Mono CJK TC Bold:style=Bold,Regular,\
