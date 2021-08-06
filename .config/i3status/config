@@ -3,30 +3,15 @@ general {
         interval = 1
 }
 
-order += "cpu_usage"
-order += "memory"
 order += "disk /"
-order += "volume master"
 order += "tztime local"
 
 disk "/" {
-        format = "💾 %free"
-}
-
-cpu_usage {
-        format = "💻 %usage"
-}
-
-memory {
-        format = "🐏 %available"
-}
-
-volume master {
-        format = "🎵 %volume"
-        format_muted = "🎵 MM"
-        device = "pulse"
+        format = "%avail "
+        prefix_type = "decimal"
 }
 
 tztime local {
-        format = "📅 %d.%m.%y %H:%M"
+        format = "%d.%m.%Y %H:%M:%S"
 }
+
