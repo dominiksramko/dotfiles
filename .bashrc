@@ -1,55 +1,32 @@
-#
-# ~/.bashrc
-#
+# ~/.bashrc:
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
 ### Prompt
-PS1='[\u@\h \W]\$ '
+PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 
 ### History settings
-HISTCONTROL=ignoredups:ignorespace
+HISTCONTROL=ignoreboth
 HISTSIZE=1000
 HISTFILESIZE=2000
+shopt -s histappend
 
 ### Aliases
 alias ls='ls --color=auto'
-alias dir="ls"
+alias dir='ls'
 
 ### Exports
-export EDITOR="subl3"
+export EDITOR='vim'
 
-### Functions
+### Misc
+shopt -s checkwinsize
 
-# Turn on external monitor
-function hdmi_on
-{
-	xrandr --output HDMI-0 --auto --right-of LVDS-0
-}
-
-function hdmi_off
-{
-	xrandr --output HDMI-0 --off
-}
-
-# Pacman functions
-function pacman_backup
-{
-	python ~/.scripts/pacman_backup.py
-}
-
-function pacman_cleanup
-{
-	sudo pacman -Rns $(pacman -Qtdq)
-}
-
-function pacman_recent
-{
-	yaourt -Q --date | less
-}
-
-function pacman_purge
-{
-	sudo pacman -Rsn $1
-}
+### Bash completion
+if ! shopt -oq posix; then
+  if [ -f /usr/share/bash-completion/bash_completion ]; then
+    . /usr/share/bash-completion/bash_completion
+  elif [ -f /etc/bash_completion ]; then
+    . /etc/bash_completion
+  fi
+fi
